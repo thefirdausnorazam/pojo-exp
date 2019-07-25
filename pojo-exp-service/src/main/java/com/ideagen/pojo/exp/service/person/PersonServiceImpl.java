@@ -1,4 +1,4 @@
-package com.ideagen.pojo.exp.service.person.impl;
+package com.ideagen.pojo.exp.service.person;
 
 import com.ideagen.pojo.exp.entity.person.Address;
 import com.ideagen.pojo.exp.entity.person.Person;
@@ -6,6 +6,7 @@ import com.ideagen.pojo.exp.model.dto.person.PersonDto;
 import com.ideagen.pojo.exp.repository.person.PersonRepository;
 import com.ideagen.pojo.exp.service.person.PersonService;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -15,8 +16,7 @@ import java.util.stream.Collectors;
 /**
  * Business logic here
  */
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class PersonServiceImpl implements PersonService {
 
     private PersonRepository personRepository;
